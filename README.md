@@ -1,12 +1,36 @@
-# instabrute
-## /!\ Deprecated (may not work, can be used as a poc)
-One of the best instagram bruteforce attack program
-# How to run instabrute : 
-for run instabrute you need the linux os
+# Salas de Voz Online
+
+Aplicación web en tiempo real con:
+
+- **Salas** para unirse por nombre.
+- **Notas de voz públicas** dentro de la sala (sin chat de texto público).
+- **Mensajes privados por texto** entre usuarios conectados en la misma sala.
+
+## Requisitos
+
+- Node.js 18+
+
+## Instalación
+
+```bash
+npm install
 ```
-git clone https://github.com/4lxprime/instabrute.git
-cd instabrute/
-chmod +x instabrute.sh
-./instabrute.sh
+
+## Ejecutar
+
+```bash
+npm start
 ```
-<img src="https://img.shields.io/github/downloads/4lxprime/instabrute/total?color=%23daff00&style=flat-square">
+
+Luego abre `http://localhost:3000`.
+
+## Cómo usar
+
+1. Escribe tu nombre y el nombre de la sala.
+2. Entra y usa **🎙️ Grabar nota** para enviar notas de voz a todos en la sala.
+3. Para privado por texto, selecciona un usuario y envía tu mensaje.
+
+## Notas
+
+- La aplicación usa `MediaRecorder`, por lo que necesitas permisos de micrófono en el navegador.
+- Los mensajes privados se restringen a usuarios de la misma sala.
