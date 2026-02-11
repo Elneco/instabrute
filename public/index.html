@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Salas de Voz</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="panel card" id="joinPanel">
+        <h1>Salas de notas de voz</h1>
+        <p>Únete a una sala para enviar notas de voz públicas y mensajes privados por texto.</p>
+        <form id="joinForm" class="stack">
+          <input id="username" type="text" maxlength="30" placeholder="Tu nombre" required />
+          <input id="room" type="text" maxlength="30" placeholder="Sala" required />
+          <button type="submit">Entrar</button>
+        </form>
+      </section>
+
+      <section class="panel hidden" id="chatPanel">
+        <header class="card header">
+          <div>
+            <h2 id="roomTitle">Sala</h2>
+            <p id="userWelcome"></p>
+          </div>
+          <button id="recordButton" class="record">🎙️ Grabar nota</button>
+        </header>
+
+        <div class="grid">
+          <article class="card">
+            <h3>Notas de voz (sala)</h3>
+            <ul id="voiceNotes" class="list"></ul>
+          </article>
+
+          <article class="card">
+            <h3>Usuarios conectados</h3>
+            <ul id="users" class="list"></ul>
+          </article>
+
+          <article class="card">
+            <h3>Privado por texto</h3>
+            <form id="privateForm" class="stack">
+              <select id="privateTarget" required>
+                <option value="">Selecciona destinatario</option>
+              </select>
+              <textarea id="privateText" rows="3" maxlength="500" placeholder="Escribe tu mensaje privado" required></textarea>
+              <button type="submit">Enviar privado</button>
+            </form>
+            <ul id="privateMessages" class="list"></ul>
+          </article>
+        </div>
+      </section>
+
+      <p id="status" class="status"></p>
+    </main>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
