@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cabezitas Eurocopa 2024</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="layout">
+      <header>
+        <h1>Cabezitas ⚽ Eurocopa 2024</h1>
+        <p>J1: A / D para mover, W para saltar, Espacio para disparar.</p>
+      </header>
+
+      <section class="hud">
+        <div>
+          <label for="teamSelect">Tu selección:</label>
+          <select id="teamSelect"></select>
+        </div>
+        <button id="restartBtn" type="button">Reiniciar partido</button>
+      </section>
+
+      <section class="scoreboard">
+        <div id="leftTeam">España</div>
+        <div id="score">0 - 0</div>
+        <div id="rightTeam">Francia (CPU)</div>
+      </section>
+
+      <canvas id="gameCanvas" width="960" height="540" aria-label="Campo de fútbol"></canvas>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
